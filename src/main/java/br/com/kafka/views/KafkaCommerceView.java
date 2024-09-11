@@ -7,7 +7,6 @@ import br.com.kafka.producers.PaymentOrderProducer;
 import br.com.kafka.utils.LoggerUtils;
 
 import java.awt.BorderLayout;
-import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -17,6 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JDialog;
@@ -182,13 +182,15 @@ public class KafkaCommerceView {
   public void showOrderDetails(JFrame frame, Order order) {
     progressDialog.dispose();
 
+    ImageIcon icon = new ImageIcon("src/main/resources/success.png");
+
     SwingUtilities.invokeLater(() -> {
       JOptionPane.showMessageDialog(
         frame,
         LoggerUtils.printFormattedOrder(order),
         "PEDIDO APROVADO",
         JOptionPane.INFORMATION_MESSAGE,
-        null
+        icon
       );
     });
 
@@ -203,7 +205,7 @@ public class KafkaCommerceView {
 
     progressDialog.setSize(400, 80);
     progressDialog.setLocationRelativeTo(frame);
-    progressDialog.setTitle("Aguardando confirmação do pagamento...");
+    progressDialog.setTitle("Aguardando confirmação do pedido...");
     progressDialog.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
 
     progressDialog.setVisible(true);

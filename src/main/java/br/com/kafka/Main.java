@@ -3,7 +3,6 @@ package br.com.kafka;
 import br.com.kafka.consumers.PaymentOrderConsumer;
 import br.com.kafka.consumers.SendOrderConsumer;
 import br.com.kafka.models.Order;
-import br.com.kafka.producers.SendOrderProducer;
 import br.com.kafka.utils.LoggerUtils;
 import br.com.kafka.views.KafkaCommerceView;
 

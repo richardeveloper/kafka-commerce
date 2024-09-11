@@ -44,6 +44,10 @@ public class PaymentOrderConsumer {
       for (ConsumerRecord<String, String> record : records) {
         Order order = orderConverter.convertJsonToOrder(record.value());
 
+        if (!order.getStatus().equals(OrderStatusEnum.AWAITING_PAYMENT)) {
+          throw new RuntimeException("O pedido informado ainda não foi processado.");
+        }
+
         order.setStatus(OrderStatusEnum.PAYED);
         order.setPaymentDate(LocalDateTime.now());
 

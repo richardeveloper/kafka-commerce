@@ -46,7 +46,7 @@ public class SendOrderConsumer {
 
         LoggerUtils.info(
           this.getClass().getSimpleName(),
-          "Envio aprovado.",
+          "Envio aprovado pela transportadora.",
           true
         );
 
@@ -54,7 +54,7 @@ public class SendOrderConsumer {
 
         LoggerUtils.info(
           this.getClass().getSimpleName(),
-          "Pedido finaliado e encaminhado para a transportadora.",
+          "Pedido finaliado com sucesso.",
           true
         );
 

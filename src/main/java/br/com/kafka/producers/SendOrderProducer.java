@@ -41,7 +41,7 @@ public class SendOrderProducer {
 
     LoggerUtils.warn(
       this.getClass().getSimpleName(),
-      "Pedido enviado para confirmação da transportadora...",
+      "Aguardando confirmação da transportadora...",
       true
     );
 
