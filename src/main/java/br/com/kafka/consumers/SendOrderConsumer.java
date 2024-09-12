@@ -5,10 +5,12 @@ import br.com.kafka.converters.OrderConverter;
 import br.com.kafka.enums.OrderStatusEnum;
 import br.com.kafka.models.Order;
 import br.com.kafka.utils.LoggerUtils;
+
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.Collections;
 import java.util.Properties;
+
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;

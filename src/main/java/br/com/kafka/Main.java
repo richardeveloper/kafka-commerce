@@ -34,11 +34,13 @@ public class Main {
     frame.setContentPane(view.getMainPanel());
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+    // CONSUMIDOR PARA PAGAMENTO DOS PEDIDOS
     new Thread(() -> {
       PaymentOrderConsumer paymentOrderConsumer = new PaymentOrderConsumer();
       paymentOrderConsumer.readPaymentOrders();
     }).start();
 
+    // CONSUMIDOR PARA ENVIO DOS PEDIDOS
     new Thread(() -> {
       SendOrderConsumer sendOrderConsumer = new SendOrderConsumer();
       sendOrderConsumer.readSendOrders();
@@ -77,7 +79,7 @@ public class Main {
     catch (Exception e) {
       LoggerUtils.danger(
         Main.class.getSimpleName(),
-        "Desculpe, não foi possível conectar ao servidor Kafka.",
+        "Não foi possível conectar ao servidor Kafka.",
         true
       );
 

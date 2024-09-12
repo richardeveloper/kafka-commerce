@@ -3,6 +3,7 @@ package br.com.kafka.converters;
 import br.com.kafka.models.Order;
 
 import br.com.kafka.utils.LoggerUtils;
+
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 

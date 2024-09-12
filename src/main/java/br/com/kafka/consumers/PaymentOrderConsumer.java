@@ -1,6 +1,5 @@
 package br.com.kafka.consumers;
 
-import br.com.kafka.Main;
 import br.com.kafka.converters.OrderConverter;
 import br.com.kafka.enums.OrderStatusEnum;
 import br.com.kafka.models.Order;
@@ -65,6 +64,7 @@ public class PaymentOrderConsumer {
           true
         );
 
+        // SIMULANDO LISTENER
         SendOrderProducer sendOrderProducer = new SendOrderProducer();
         sendOrderProducer.sendPaymentOrder(order);
       }

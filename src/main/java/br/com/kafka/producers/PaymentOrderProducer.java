@@ -57,7 +57,7 @@ public class PaymentOrderProducer {
     producer.close();
   }
 
-  private Properties properties() {
+  private static Properties properties() {
     Properties properties = new Properties();
     properties.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
     properties.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());

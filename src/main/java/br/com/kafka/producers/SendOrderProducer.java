@@ -4,8 +4,9 @@ import br.com.kafka.converters.OrderConverter;
 import br.com.kafka.enums.OrderStatusEnum;
 import br.com.kafka.models.Order;
 import br.com.kafka.utils.LoggerUtils;
-import java.time.LocalDateTime;
+
 import java.util.Properties;
+
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
@@ -48,7 +49,7 @@ public class SendOrderProducer {
     producer.close();
   }
 
-  private Properties properties() {
+  private static Properties properties() {
     Properties properties = new Properties();
     properties.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
     properties.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
