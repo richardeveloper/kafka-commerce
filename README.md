@@ -1,5 +1,12 @@
 # ADS1242 - Atividade 01: Consumidores e Produtores
 
+<div align="center">
+
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+![Apache Kafka](https://img.shields.io/badge/Apache%20Kafka-000?style=for-the-badge&logo=apachekafka)
+
+</div>
+
 ## Instruções
 <p align="justify">Desenvolva uma aplicação de mensageria utilizando <b>Java</b> e <b>Apache Kafka</b> para simular um sistema simplificado de compras e estoque, que envolva a comunicação entre um cliente e um servidor.</p>
 
